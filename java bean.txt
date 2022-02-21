@@ -1,0 +1,77 @@
+package itemapi;
+
+import java.io.Serializable;
+
+public class Item implements Serializable {
+private String itemName;
+private double price;
+private int quantity;
+public Item(String itemName, double price, int quantity) {
+super();
+this.itemName = itemName;
+this.price = price;
+this.quantity = quantity;
+}
+public Item() {
+super();
+}
+public String getItemName() {
+return itemName;
+}
+public void setItemName(String itemName) {
+this.itemName = itemName;
+}
+public double getPrice() {
+return price;
+}
+public void setPrice(double price) {
+this.price = price;
+}
+public int getQuantity() {
+return quantity;
+}
+public void setQuantity(int quantity) {
+this.quantity = quantity;
+}
+}
+
+
+java enum
+
+class Calendar
+{
+enum Days
+{
+SUNDAY,
+MONDAY,
+TUESDAY,
+WEDNESDAY,
+THURSDAY,
+FRIDAY,
+SATURDAY
+}
+
+ public void checkDay(Days day)
+{
+System.out.println("Day is " +day);
+}
+public static void main(String args[])
+{
+Days d=Days.MONDAY;
+Calendar c=new Calendar();
+c.checkDay(Days.TUESDAY);
+}
+}
+
+interface lab
+
+public interface Savable
+{
+static final boolean SAVESTATUS=true ;
+abstract void saveDetails();
+
+ default void setSaveLocation()
+{
+System.out.println("save location set");
+}
+}
